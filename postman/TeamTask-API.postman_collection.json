@@ -1,0 +1,10 @@
+{
+  "info": {"name": "TeamTask API", "_postman_id": "c1f6c9ac-4c7d-4a6e-9d6a-8f53f4a0a101", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},
+  "variable": [{"key":"baseUrl","value":"http://localhost:8080"},{"key":"token","value":""}],
+  "item": [
+    {"name":"Register","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"fullName\": \"Bhumika\",\n  \"email\": \"bhumika@example.com\",\n  \"password\": \"StrongPass123\"\n}"},"url":"{{baseUrl}}/api/auth/register"}},
+    {"name":"Login","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"email\": \"bhumika@example.com\",\n  \"password\": \"StrongPass123\"\n}"},"url":"{{baseUrl}}/api/auth/login"}},
+    {"name":"My profile","request":{"method":"GET","header":[{"key":"Authorization","value":"Bearer {{token}}"}],"url":"{{baseUrl}}/api/auth/me"}},
+    {"name":"Create team","request":{"method":"POST","header":[{"key":"Authorization","value":"Bearer {{token}}"},{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"name\": \"Backend Team\",\n  \"description\": \"Project collaboration\"\n}"},"url":"{{baseUrl}}/api/teams"}}
+  ]
+}
