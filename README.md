@@ -52,3 +52,8 @@ Most endpoints other than `/api/auth/**` require `Authorization: Bearer <token>`
 - Uploaded files are stored under `uploads/` locally.
 - Replace the development JWT secret before any production deployment.
 - This package is a development starter. Run the build and API smoke tests in your environment before submitting; do not represent it as production-audited.
+
+
+## Project Status
+
+TeamTask backend development is in progress.
